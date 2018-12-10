@@ -1,0 +1,42 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package shared_student_work.Cpuobjects;
+
+
+/**
+ *
+ * @author collin.sekel
+ */
+public class Cpu {
+    private String coreNumber;
+    private double unitPrice;
+    private String cpuName;
+    private double chipSet;
+
+    public String getcoreNumber() {
+        
+        return coreNumber;
+    }
+    public void setCoreNumber(String coreNumber) {
+        this.coreNumber = coreNumber;
+        
+    }
+    public void setCpuName (String CpuName){
+        this.cpuName = cpuName;
+    }
+    public double getUnitPrice(){
+        double UnitPrice = (120);
+        return UnitPrice;}
+    
+    public double getChipSet(){
+        double ChipSet = 4;
+        return ChipSet;
+        
+    }
+        static {
+        
+    } //close method
+} // close class
