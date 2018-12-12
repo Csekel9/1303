@@ -1,0 +1,115 @@
+package shared_student_work.Cpuobjects;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+class Pcbuild {
+    public String owner = "Collin";
+    public String color = "Red";
+    public String brand = "MSI";
+    public double cpuCooler;
+    public double cpuCore;
+    public double processSpeed;
+    public double addition;
+    public double subtraction;
+    public double multiplication;  
+    public double division;
+    public int numericChoice;
+    public int x;
+    public int y;
+  
+    public double computer()throws IOException{
+    
+        try {
+        BufferedReader lineReader = new BufferedReader
+                (new InputStreamReader(System.in));
+        numericChoice = Integer.parseInt(lineReader.readLine());
+    } catch (IOException e) {
+     System.out.println("Incorrect" + e.getMessage());
+    } catch(NumberFormatException e) {
+     System.out.println("Incorrect!" + e.getMessage());
+    }
+    
+        return numericChoice;
+        } 
+    
+        public String owner() throws IOException {
+            System.out.println("Ownership of this pc: ");
+            BufferedReader reader =
+                    new BufferedReader (new InputStreamReader(System.in));
+            String ownerName = reader.readLine();
+            owner = ownerName;
+            return owner;
+        }
+        public String color() throws IOException {
+            System.out.println("Color of tower: ");
+            BufferedReader reader =
+                    new BufferedReader (new InputStreamReader(System.in));
+            String computerColor = reader.readLine();
+            color = computerColor;
+            return computerColor;
+        }
+        public String brand() throws IOException {
+            System.out.println("Brand name of pc: ");
+            BufferedReader reader =
+                    new BufferedReader (new InputStreamReader(System.in));
+            String computerBrand = reader.readLine();
+            brand = computerBrand;
+            return computerBrand;
+        }
+        public String cpuCore() throws IOException {
+            System.out.println("Cpu cores: ");
+            BufferedReader reader =
+                    new BufferedReader (new InputStreamReader(System.in));
+            String core = reader.readLine();
+            cpuCore = Double.parseDouble(core);
+            return core;
+        }
+        public String cpuCooler() throws IOException {
+            System.out.println("Cpu cooling type:");
+            BufferedReader reader =
+                    new BufferedReader (new InputStreamReader (System.in));
+            String cooler = reader.readLine();
+            return cooler;
+            
+        }
+        public String processSpeed() throws IOException {
+            System.out.println("Proccessing speed: ");
+            BufferedReader reader =
+                    new BufferedReader (new InputStreamReader(System.in));
+            String speed = reader.readLine();
+            processSpeed = Double.parseDouble(speed);
+            return speed;
+        }
+        public void displayStats() {
+            System.out.println("Owner name: " + owner
+            +"\nComputer color: " + color
+            +"\nComputer brand: " + brand
+            +"\nChip core: " + cpuCore
+                +"\ncpu cooler: "   
+            +"\nProcess speed: " + processSpeed);
+            
+        
+        }
+        
+} 
+    
+public class PcCustomizer{
+    public static void main(String[] args) throws IOException {
+        Pcbuild computer1 = new Pcbuild();
+
+computer1.owner();
+        
+        computer1.color();
+        
+        computer1.brand();
+        
+        computer1.cpuCore();
+        
+        computer1.cpuCooler();
+        
+        computer1.processSpeed();
+        
+        computer1.displayStats();
+    } 
+}
