@@ -1,0 +1,128 @@
+package shared_student_work.Cpuobjects;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+class Pcbuild {
+    public String owner = "Collin";
+    public String color = "Red";
+    public String brand = "MSI";
+    public String cpuName;
+    public String cpuCooler;
+    public String cpuCore;
+    public double processSpeed;
+    public double addition;
+    public double subtraction;
+    public double multiplication;  
+    public double division;
+    public int numericChoice;
+    public int x;
+    public int y;
+  
+    public double computer()throws IOException{
+    
+        try {
+        BufferedReader lineReader = new BufferedReader
+                (new InputStreamReader(System.in));
+        numericChoice = Integer.parseInt(lineReader.readLine());
+    } catch (IOException e) {
+     System.out.println("Incorrect" + e.getMessage());
+    } catch(NumberFormatException e) {
+     System.out.println("Incorrect!" + e.getMessage());
+    }
+    
+        return numericChoice;
+        } 
+    
+        public String owner() throws IOException {
+            System.out.println("Ownership of this pc: ");
+            BufferedReader reader =
+                    new BufferedReader (new InputStreamReader(System.in));
+            String ownerName = reader.readLine();
+            owner = ownerName;
+            return owner;
+        }
+        public String color() throws IOException {
+            System.out.println("Color of tower: ");
+            BufferedReader reader =
+                    new BufferedReader (new InputStreamReader(System.in));
+            String Color = reader.readLine();
+            color = Color;
+            return Color;
+        }
+        public String brand() throws IOException {
+            System.out.println("Brand name of pc: ");
+            BufferedReader reader =
+                    new BufferedReader (new InputStreamReader(System.in));
+            String CompBrand = reader.readLine();
+            brand = CompBrand;
+            return CompBrand;
+        }
+        public String cpuName () throws IOException {
+            System.out.println("Cpu name Amd or Intel:");
+            BufferedReader reader = 
+                    new BufferedReader (new InputStreamReader (System.in));
+            String Chipname = reader.readLine();
+        String chipName = cpuName;
+            return cpuName;
+        }
+        public String cpuCore() throws IOException {
+            System.out.println("Cpu cores: ");
+            BufferedReader reader =
+                    new BufferedReader (new InputStreamReader(System.in));
+            String core = reader.readLine();
+            core = cpuCore;
+            return core;
+        }
+        public String cpuCooler() throws IOException {
+            System.out.println("Cpu cooling type:");
+            BufferedReader reader =
+                    new BufferedReader (new InputStreamReader (System.in));
+            String cooler = reader.readLine();
+            cooler = cpuCooler;
+            return cooler;
+            
+        }
+        public String processSpeed() throws IOException {
+            System.out.println("Proccessing speed: ");
+            BufferedReader reader =
+                    new BufferedReader (new InputStreamReader(System.in));
+            String speed = reader.readLine();
+            processSpeed = Double.parseDouble(speed);
+            return speed;
+        }
+        public void displayStats() {
+            System.out.println("Owner name: " + owner
+            +"\nComputer color: " + color
+            +"\nComputer brand: " + brand
+            +"\nChip brand: " + cpuName
+            +"\nChip core: " + cpuCore
+                +"\nCpu cooler: "   
+            +"\nProcess speed: " + processSpeed);
+            
+        
+        }
+        
+} 
+    
+public class Computerbuild{
+    public static void main(String[] args) throws IOException {
+        Pcbuild computer = new Pcbuild();
+
+computer.owner();
+        
+        computer.color();
+        
+        computer.brand();
+        
+        computer.cpuName();
+        
+        computer.cpuCore();
+        
+        computer.cpuCooler();
+        
+        computer.processSpeed();
+        
+        computer.displayStats();
+    } 
+}
