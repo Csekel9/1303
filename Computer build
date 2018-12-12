@@ -4,10 +4,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 class Pcbuild {
-    public String owner = "Collin";
-    public String color = "Red";
-    public String brand = "MSI";
-    public String cpuName;
+    public String owner  ;
+    public String color  ;
+    public String compBrand;
+    public String cpuBrand;
     public String cpuCooler;
     public String cpuCore;
     public double processSpeed;
@@ -19,7 +19,7 @@ class Pcbuild {
     public int x;
     public int y;
   
-    public double computer()throws IOException{
+    public double compbrand()throws IOException{
     
         try {
         BufferedReader lineReader = new BufferedReader
@@ -50,37 +50,33 @@ class Pcbuild {
             color = Color;
             return Color;
         }
-        public String brand() throws IOException {
-            System.out.println("Brand name of pc: ");
+        public String cpubrand() throws IOException {
+            System.out.println("Cpu name Amd or Intel: ");
             BufferedReader reader =
                     new BufferedReader (new InputStreamReader(System.in));
-            String CompBrand = reader.readLine();
-            brand = CompBrand;
-            return CompBrand;
+            cpuBrand = reader.readLine();
+            return cpuBrand;
         }
-        public String cpuName () throws IOException {
-            System.out.println("Cpu name Amd or Intel:");
+        public String compBrand () throws IOException {
+            System.out.println("Computer brand:");
             BufferedReader reader = 
                     new BufferedReader (new InputStreamReader (System.in));
-            String Chipname = reader.readLine();
-        String chipName = cpuName;
-            return cpuName;
+            compBrand = reader.readLine();
+            return compBrand;
         }
         public String cpuCore() throws IOException {
             System.out.println("Cpu cores: ");
             BufferedReader reader =
                     new BufferedReader (new InputStreamReader(System.in));
-            String core = reader.readLine();
-            core = cpuCore;
-            return core;
+            cpuCore = reader.readLine();
+            return cpuCore;
         }
         public String cpuCooler() throws IOException {
             System.out.println("Cpu cooling type:");
             BufferedReader reader =
                     new BufferedReader (new InputStreamReader (System.in));
-            String cooler = reader.readLine();
-            cooler = cpuCooler;
-            return cooler;
+            cpuCooler = reader.readLine();
+            return cpuCooler;
             
         }
         public String processSpeed() throws IOException {
@@ -94,10 +90,10 @@ class Pcbuild {
         public void displayStats() {
             System.out.println("Owner name: " + owner
             +"\nComputer color: " + color
-            +"\nComputer brand: " + brand
-            +"\nChip brand: " + cpuName
+            +"\nComputer Brand: " +compBrand        
+            +"\nChip brand: " + cpuBrand
             +"\nChip core: " + cpuCore
-                +"\nCpu cooler: "   
+                +"\nCpu cooler: " + cpuCooler
             +"\nProcess speed: " + processSpeed);
             
         
@@ -113,9 +109,9 @@ computer.owner();
         
         computer.color();
         
-        computer.brand();
+        computer.cpubrand();
         
-        computer.cpuName();
+        computer.compBrand();
         
         computer.cpuCore();
         
